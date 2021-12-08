@@ -1,6 +1,10 @@
 import unittest
 
-from commacode import list_to_grammar
+try:
+    from commacode import list_to_grammar
+except ImportError:
+    print("list_to_grammar function not found")
+    raise
 
 
 class Test(unittest.TestCase):
