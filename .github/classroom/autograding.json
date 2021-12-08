@@ -2,8 +2,8 @@
   "tests": [
     {
       "name": "File exists",
-      "setup": "",
-      "run": "[ -e filename.py ] && exit 0 || exit 1",
+      "setup": "cp .github/scripts/test_commacode.py test_commacode.py",
+      "run": "[ -e commacode.py ] && exit 0 || exit 1",
       "input": "",
       "output": "",
       "comparison": "included",
@@ -13,7 +13,37 @@
     {
       "name": "Add numbers",
       "setup": "",
-      "run": "/bin/bash .github/scripts/test.sh",
+      "run": "python test_commacode.py Test.test_empty_list",
+      "input": "",
+      "output": "pass",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 5
+    },
+    {
+      "name": "Add numbers",
+      "setup": "",
+      "run": "python test_commacode.py Test.test_single_item",
+      "input": "",
+      "output": "pass",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 5
+    },
+    {
+      "name": "Add numbers",
+      "setup": "",
+      "run": "python test_commacode.py Test.test_list",
+      "input": "",
+      "output": "pass",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 5
+    },
+    {
+      "name": "Add numbers",
+      "setup": "",
+      "run": "python test_commacode.py Test.test_not_list",
       "input": "",
       "output": "pass",
       "comparison": "included",
